@@ -10,7 +10,7 @@ console.log(myOl);
 console.log(myInput.value);
 
 // add event listener to button
-myButton.addEventListener('dblclick', function() { 
+myButton.addEventListener('click', function() { 
     // const li = document.createElement('li');
     // li.innerHTML = myInput.value;
     // myOl.append(li);
