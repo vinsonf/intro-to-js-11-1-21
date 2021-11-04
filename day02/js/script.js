@@ -57,3 +57,13 @@ console.log(myArray[0]); // arrays cannot be accessed with dot notation (myArray
 const myElement = document.getElementById('myElement');
 console.log(myElement);
 myElement.innerHTML = '<h1>Hello World</h1>';
+
+
+// arithmetic operators
+let answer = 0;
+
+answer += 5;
+answer += 5;
+answer -= 2;
+answer *= 2;
+answer /= 4;
