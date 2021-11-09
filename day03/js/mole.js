@@ -20,7 +20,7 @@ setTimeout( function() {
 
 let score = 0;
 
-img.addEventListener('click', function () {
+img.addEventListener('mouseenter', function () {
     score += 1;
     console.log(score);
     move();
