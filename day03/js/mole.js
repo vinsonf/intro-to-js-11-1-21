@@ -20,8 +20,12 @@ setTimeout( function() {
 
 let score = 0;
 
-img.addEventListener('mouseenter', function () {
+img.addEventListener('click', function () {
     score += 1;
     console.log(score);
     move();
 });
+
+
+const mole = document.querySelector('img');
+console.log(mole.style.border = '1px solid red');
