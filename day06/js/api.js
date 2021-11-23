@@ -1,7 +1,7 @@
 const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 function getPokemon(name) {
-  return fetch(baseUrl + name).then(data => data.json())
+  return fetch(baseUrl + name).then(data => data.json());
 }
 
 getPokemon('mew')
