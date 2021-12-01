@@ -1,0 +1,34 @@
+.game-board {
+    height: 400px;
+    width: 400px;
+
+    border: 1px solid black;
+}
+
+.color-box {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+
+.active {
+    opacity: 0.5;
+}
