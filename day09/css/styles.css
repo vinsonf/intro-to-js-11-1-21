@@ -1,0 +1,20 @@
+form {
+    background-color: aqua;
+    display: inline-block;
+
+    padding: 10px;
+  
+    text-align: center;
+}
+
+form input{
+    margin: 5px;
+    width: 100px;
+    display: block;
+}
+
+form input[type=submit] {
+    width: 108px;
+    border: none;
+    border-bottom: 1px solid red;
+}
