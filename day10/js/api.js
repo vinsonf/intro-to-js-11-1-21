@@ -11,3 +11,9 @@ export function getRandomLocation() {
     .then( user => user.location)
     .then( location => `${location.country}`);
 }
+
+
+export function getRandomName() {
+    return getRandomUser()
+    .then( user => `${user.name.first}, ${user.name.last}`);
+}

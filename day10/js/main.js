@@ -1,24 +1,40 @@
-import { getRandomLocation, getRandomUser } from './api.js';
+import { getRandomLocation, getRandomUser, getRandomName } from './api.js';
 import { phonePattern } from './validations.js';
-import { createAlphaButtons, createLocationButtons} from './dom-helpers.js';
+import { 
+    buildCardElements,
+    createAlphaButtons,
+    createLocationButtons,
+    createPile,
+    placeCardsOnPile,
+} from './dom-helpers.js';
+
+import { createCardDeck, shuffleDeck } from './cards.js';
+
+const deck = createCardDeck();
+shuffleDeck(deck);
+buildCardElements(deck);
+const piles = [{
+    pile: createPile(),
+    deck: deck.slice(0, 26),
+    top: '200px',
+    name: 'Player 1'
+}, {
+    pile: createPile(),
+    deck: deck.slice(26),
+    top: '400px',
+    name: 'Player 2'
+}];
 
 
 
-// console.log(phonePattern.test('(123)888-8888'));
-
-getRandomUser()
-.then(user => {
-    console.log(user)
-    const phone = user.phone;
-    console.log(phone);
-    console.log(phonePattern.test(phone));
-});
-
-getRandomLocation().then(location => {
-    console.log(location);
-    createLocationButtons(location);
-}) ;
+placeCardsOnPile(piles[0]);
+placeCardsOnPile(piles[1]);
 
 
-createAlphaButtons();
+
+// getRandomName().then(name => {
+//     console.log(name);
+//     createLocationButtons(name);
+// }) ;
+// createAlphaButtons();
 
